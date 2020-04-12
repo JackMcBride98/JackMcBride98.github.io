@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jack's Chat Site</title>
+        <style>
+            .chat.page {display: none}
+            * { 
+                font-family: "Comic Sans MS", cursive, sans-serif;
+            }
+            ul {
+                list-style: none
+            }
+            .login.page {
+                postion: absolute;
+                height: 100px;
+                text-align: center;
+                top: 50%;
+                width: 100%;
+            }
+
+            #messages {
+                height: 100%;
+                margin: 0;
+                overflow-y: scroll;
+                padding: 10px 20px 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="pages">
+           <li class="chat page">
+                <h1>Jack's Chat Room</h1>
+                <ul id="messages"></ul>
+                <p>Users Online</p>
+                <ul id="users"></ul>
+                <p>Users Typing</p>
+                <ul id="onlineUsers"></ul>
+                <form class="send"action="">
+                    <input id="m" autocomplete="off"/>
+                </form>
+           </li>
+           <li class="login page">
+               <h1>Jack's Chat Room</h1>
+               <h1>Enter Your Username</h1>
+               <form class="name"action="">
+                   <input id="n" autocomplete="off"/>
+                   <button id="enter">Enter</button>
+               </form>
+           </li>
+        </ul>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>
